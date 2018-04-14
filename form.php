@@ -42,12 +42,15 @@ position: absolute;
 }
 
 /*inputs*/
+#msform input[type="radio"]{
+	width:10%;
+}
 #msform input, #msform textarea {
 padding: 15px;
 border: 1px solid #ccc;
 border-radius: 3px;
 margin-bottom: 10px;
-width: 100%;
+width: 10%;
 box-sizing: border-box;
 font-family: montserrat;
 color: #2C3E50;
@@ -85,13 +88,10 @@ color: #666;
 margin-bottom: 20px;
 }
 
-#msform input[type="radio"]{
-width:10% !important;
-}
 
 /* Rating CSS */
 .rating {overflow: hidden;display: inline-block;}
-.rating-input {float: right;width: 20px;height: 20px;padding: 0;margin: 0 0 0 -16px;opacity: 0;}
+.rating-input {float: right; width:10% !important; width:16px !important;height: 16px;padding: 0;margin: 0 0 0 -16px;opacity: 0;}
 .rating-star {cursor: pointer;position: relative;display: block;width: 16px;height: 16px;background: url('star.png') 0 -16px;
 }
 .rating-star:hover {background-position: 0 0;}
@@ -127,6 +127,7 @@ width:10% !important;
 
 	<div id="step_3" class="">
 		<h3 class="fs-subtitle">3. How would you rate your visit ?</h3>
+		<div class="rating">
 			<input type="radio" class="rating-input next" id="rating-input-1-5" name="rating-visit" value="5">
 			<label for="rating-input-1-5" class="rating-star"></label>
 			<input type="radio" class="rating-input next" id="rating-input-1-4" name="rating-visit" value="4">
@@ -137,13 +138,14 @@ width:10% !important;
 			<label for="rating-input-1-2" class="rating-star"></label>
 			<input type="radio" class="rating-input next" id="rating-input-1-1" name="rating-visit" value="1">
 			<label for="rating-input-1-1" class="rating-star"></label>
+		</div>
 		<p><a class="btn btn-primary" id="next3">next</a></p>
 		<p><a class="btn btn-primary" id="previous2" >Previous</a></p>
 	</div>
 	
 	<div id="step_4" class="">
 		<h3 class="fs-subtitle">4. How would you rate the staff ?</h3>
-	 
+		<div class="rating">
 		<input type="radio" class="rating-input next" id="rating-input-2-5" name="rating-staff" value="5" >
 		<label for="rating-input-2-5" class="rating-star"></label>
 		<input type="radio" class="rating-input next" id="rating-input-2-4" name="rating-staff" value="4" >
@@ -154,6 +156,7 @@ width:10% !important;
 		<label for="rating-input-2-2" class="rating-star"></label>
 		<input type="radio" class="rating-input next" id="rating-input-2-1" name="rating-staff" value="1" >
 		<label for="rating-input-2-1" class="rating-star"></label>
+		</div>
 		<p><a class="btn btn-primary" id="next4">next</a></p>
 		<p><a class="btn btn-primary" id="previous3" >Previous</a></p>
 		
